@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3dd5091be5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ------------ Navbar ------------- -->
+
+    <nav>
+      <div class="logoBlk">
+        <a href="index.html">
+          <img class="logo" src="Good Meal.png" alt="logo" />
+        </a>
+        <h3>Meal Menu</h3>
+      </div>
+      <div class="searchBlk">
+        <input class="searchInput" type="search" placeholder="Search Food" />
+        <button class="searchBtn" name="jai" title="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Favourites Foods -->
+
+    <section class="favBlk">
+      <h3 class="favtxt">Favourites</h3>
+      <ul class="favLists">
+        <!-- <li>
+          <img
+            src="https://www.themealdb.com//images//media//meals//ustsqw1468250014.jpg"
+            alt="Spicy Arrabiata Penne"
+          />
+          <span>Spicy Arrabiata Penne</span>
+          <button class="delBtn" data-idMeal="12345">
+            <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+          </button>
+        </li> -->
+      </ul>
+    </section>
+
+    <!-- Random Food -->
+
+    <section class="randomBlk" id="randomBlk">
+      <h3 class="randomtxt">Random Food</h3>
+      <!-- <div class="foodBox">
+        <div class="foodTemplate">
+          <img
+            src="https://www.themealdb.com//images//media//meals//k420tj1585565244.jpg"
+            alt="Burger"
+          />
+          <div class="foodBar">
+            <span>Burger</span>
+            <button class="favBtn " data-idMeal="12345"><i class="fa-solid fa-heart"></i></button>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!------ Food List ------>
+
+    <section class="foodListBlk">
+      <h3 class="foodListtxt">Food Lists</h3>
+      <ul class="foodList">
+        <!-- <li class="foodBox">
+          <div class="foodTemplate">
+            <img
+              src="https://www.themealdb.com//images//media//meals//k420tj1585565244.jpg"
+              alt="Burger"
+            />
+            <div class="foodBar">
+              <span>Burger</span>
+              <button class="favBtn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </section>
+
+    <!-- --------Food by Country ---------->
+
+    <section class="ctryBlk">
+      <h3 class="ctrytxt">Country's Food</h3>
+      <ul class="ctryLists">
+        <li class="ctryItem" onclick="ctryMealDatas('Indian')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/in.png"
+            alt="India"
+            title="India"
+          />
+          <span>India</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('British')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/gb.png"
+            alt="British"
+            title="British"
+          />
+          <span>British</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('American')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/us.png"
+            alt="American"
+            title="American"
+          />
+          <span>American</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('French')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/fr.png"
+            alt="French"
+            title="French"
+          />
+          <span>French</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Jamaican')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/jm.png"
+            alt="Jamaican"
+            title="Jamaican"
+          />
+          <span>Jamaican</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Canadian')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/ca.png"
+            alt="Canadian"
+            title="Canadian"
+          />
+          <span>Canadian</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Chinese')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/cn.png"
+            alt="Chinese"
+            title="Chinese"
+          />
+          <span>Chinese</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Dutch')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/nl.png"
+            alt="Dutch"
+            title="Dutch"
+          />
+          <span>Dutch</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Egyptian')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/eg.png"
+            alt="Egyptian"
+            title="Egyptian"
+          />
+          <span>Egyptian</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Greek')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/gr.png"
+            alt="Greek"
+            title="Greek"
+          />
+          <span>Greek</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Irish')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/ie.png"
+            alt="Irish"
+            title="Irish"
+          />
+          <span>Irish</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Italian')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/it.png"
+            alt="Italian"
+            title="Italian"
+          />
+          <span>Italian</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Japanese')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/jp.png"
+            alt="Japanese"
+            title="Japanese"
+          />
+          <span>Japanese</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Kenyan')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/kn.png"
+            alt="Kenyan"
+            title="Kenyan"
+          />
+          <span>Kenyan</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Malaysian')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/my.png"
+            alt="Malaysian"
+            title="Malaysian"
+          />
+          <span>Malaysian</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Mexican')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/mx.png"
+            alt="Mexican"
+            title="Mexican"
+          />
+          <span>Mexican</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Moroccan')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/ma.png"
+            alt="Moroccan"
+            title="Moroccan"
+          />
+          <span>Moroccan</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Croatian')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/hr.png"
+            alt="Croatian"
+            title="Croatian"
+          />
+          <span>Croatian</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Russian')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/ru.png"
+            alt="Russian"
+            title="Russian"
+          />
+          <span>Russian</span>
+        </li>
+        <li class="ctryItem" onclick="ctryMealDatas('Spanish')">
+          <img
+            src="https://www.themealdb.com/images/icons/flags/big/64/es.png"
+            alt="Spanish"
+            title="Spanish"
+          />
+          <span>Spanish</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- -------Choose Foods By Alphabet------>
+
+    <section class="alpBlk">
+      <h3 class="alptxt">Choose Foods By Alphabet</h3>
+      <ul class="alpLists">
+        <li>
+          <div class="alpItem" onclick="alphaMealData('A')">A</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('B')">B</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('C')">C</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('D')">D</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('E')">E</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('F')">F</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('G')">G</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('H')">H</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('I')">I</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('J')">J</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('K')">K</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('L')">L</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('M')">M</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('N')">N</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('O')">O</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('P')">P</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('Q')">Q</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('R')">R</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('S')">S</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('T')">T</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('U')">U</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('V')">V</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('W')">W</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('X')">X</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('Y')">Y</div>
+        </li>
+        <li>
+          <div class="alpItem" onclick="alphaMealData('Z')">Z</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ------------ Categories---------- -->
+
+    <section class="catBlk">
+      <h3 class="cattxt">Categories</h3>
+      <ul class="catLists">
+        <li class="catItem" onclick="categoryMealData('Beef')">
+          <div>Beef</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Breakfast')">
+          <div>Breakfast</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Chicken')">
+          <div>Chicken</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Dessert')">
+          <div>Dessert</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Goat')">
+          <div>Goat</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Lamb')">
+          <div>Lamb</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Pasta')">
+          <div>Pasta</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Pork')">
+          <div>Pork</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Seafood')">
+          <div>Seafood</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Side')">
+          <div>Side</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Starter')">
+          <div>Starter</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Vegan')">
+          <div>Vegan</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Vegetarian')">
+          <div>Vegetarian</div>
+        </li>
+        <li class="catItem" onclick="categoryMealData('Miscellaneous')">
+          <div>Miscellaneous</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <h3>Created By Jeyadheesh</h3>
+      </div>
+    </footer>
+
+    <!-- -------------Meal Info ---------------- -->
+
+    <section class="mealInfoBlk">
+      <!-- <div class="mealInfoBox">
+        <h3 class="mitxt">Spicy Arrabiata Penne</h3>
+        <img
+          class="miImg"
+          src="https://www.themealdb.com//images//media//meals//ustsqw1468250014.jpg"
+          alt="Spicy Arrabiata Penne"
+        />
+        <div class="rcpBox">
+          <h3>Recipe</h3>
+          <p class="recInfo">
+            1 Preheat the oven to 230°C.\r\n\r\n2 Add the sugar and crumble the
+            fresh yeast into warm water.\r\n\r\n3 Allow the mixture to stand for
+            10 – 15 minutes in a warm place (we find a windowsill on a sunny day
+            works best) until froth develops on the surface.\r\n\r\n4 Sift the
+            flour and salt into a large mixing bowl, make a well in the middle
+            and pour in the yeast mixture and olive oil.\r\n\r\n5 Lightly flour
+            your hands, and slowly mix the ingredients together until they
+            bind.\r\n\r\n6 Generously dust your surface with flour.\r\n\r\n7
+            Throw down the dough and begin kneading for 10 minutes until smooth,
+            silky and soft.\r\n\r\n8 Place in a lightly oiled, non-stick baking
+            tray (we use a round one, but any shape will do!)\r\n\r\n9 Spread
+            the passata on top making sure you go to the edge.\r\n\r\n10 Evenly
+            place the mozzarella (or other cheese) on top, season with the
+            oregano and black pepper, then drizzle with a little olive
+            oil.\r\n\r\n11 Cook in the oven for 10 – 12 minutes until the cheese
+            slightly colours.\r\n\r\n12 When ready, place the basil leaf on top
+            and tuck in!"
+          </p>
+        </div>
+        <div class="ingBox">
+          <h3>Ingredient</h3>
+
+          <ul class="ingList">
+            <li>penne rigate -> 1 pound</li>
+            <li>olive oil -> 1/4 cup</li>
+            <li>garlic -> 3 cloves</li>
+            <li>chopped tomatoes -> 1 tin</li>
+            <li>red chile flakes -> 1/2 teaspoon</li>
+            <li>italian seasoning -> 1/2 teaspoon</li>
+            <li>basil -> 6 leaves</li>
+            <li>Parmigiano-Reggiano -> spinkling</li>
+          </ul>
+        </div>
+        <div class="midelBtn">
+          <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+        </div>
+      </div> -->
+    </section>
+  </body>
+  <script src="main.js"></script>
+</html>
